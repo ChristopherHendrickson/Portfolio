@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./style.css">
+    
+    <title>Christopher Hendrickson</title>
+</head>
+
+<body>
+    <div class="side-panel">
+        <a id='normal-scroll'>Allow normal scrolling</a>
+        <div class="container-knob">
+            <a class="nav-label" id="about-label">About Me</a>
+            <a class="nav-label" id="skills-label">Skills</a>
+            <a class="nav-label" id="projects-label">Projects</a>
+            <a class="nav-label" id="links-label">Links</a>
+            <div id="box" class="box">
+                <div class="circle">
+                    <div id="dot" class="dot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content" id="content">
+        <div class="content-block" id="c1">
+            <h1 class="title">Christopher Hendrickson</h1>
+            <h2 class="sub-title">Software Developer</h2>
+        </div>
+        <div class="content-block" id="c2">
+            <h1 class="title">Skills</h1>
+            <h2 class="sub-title"></h2>
+        </div>
+        <div class="content-block" id="c3">
+            <h1 class="title">Projects</h1>
+            <h2 class="sub-title">Check out some of my work so far.</h2>
+            <div class="projects">
+                <button id="p-b-left"></button>
+                    <div class="project-swipe">
+                        <div id="p1" class="project hidden">
+                            <a target="_blank" class="project-title" href="https://christopherhendrickson.github.io/tic-tac-toe">Tic-Tac-Toe & Connect 4</a>
+                            <p class="project-desc">Play tic-tac-toe and connect 4 against friends, or the computer with varying levels of difficulty.</p>
+                        </div>
+                        <div id="p2" class="project back-left">
+                            <a target="_blank" class="project-title" href="http://music-mikser.herokuapp.com/playlists">MIKSEr</a>
+                            <p class="project-desc">A song warping music guessing game. Create a playlist, guess other users playlists, or play with random spotify tracks.</p>
+                        </div>
+                        <div id="p3" class="project center">
+                            <a target="_blank" class="project-title" href="https://ninelocks.herokuapp.com/">Nine Locks</a>
+                            <p class="project-desc">A real time online multiplayer card game, invented by some friends and I during a ski trip.</p>
+                        </div>
+                        <div id="p4" class="project back-right">
+                            <a target="_blank" class="project-title" href="https://kerosene-date.herokuapp.com/">Kerosene</a>
+                            <p class="project-desc">A match-making style dating app with a current userbase consisting mostly of very cute dogs. This is a mobile first app, and was developed in a team of three</p>
+                        </div>
+
+                    </div>
+
+                <button id="p-b-right"></button>
+            </div>
+        </div>
+        <div class="content-block" id="c4">
+            <h1 class="title">Links</h1>
+            <div class="links">
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="scroll-point"></div>
+
+</body>
+<script src='script.js'></script>
+</html>
