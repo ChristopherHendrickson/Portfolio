@@ -15,12 +15,13 @@
 
 <body>
     <div class="side-panel">
-        <a id='normal-scroll'>Allow normal scrolling</a>
+        <h2 class="marg-10">Christopher Hendrickson</h2>
+        <a class="marg-10" id='normal-scroll'>Allow normal scrolling</a>
         <div class="container-knob">
             <a class="nav-label" id="about-label">About Me</a>
             <a class="nav-label" id="skills-label">Skills</a>
             <a class="nav-label" id="projects-label">Projects</a>
-            <a class="nav-label" id="links-label">Links</a>
+            <a class="nav-label" id="links-label">Links & Contact</a>
             <div id="box" class="box">
                 <div class="circle">
                     <div id="dot" class="dot"></div>
@@ -33,9 +34,14 @@
         <div class="content-block" id="c1">
             <h1 class="title">Christopher Hendrickson</h1>
             <h2 class="sub-title">Software Developer</h2>
+            <div class="about">
+                <p class="">Hi! I'm Chris. I'm a full-stack web developer currently based in Wellingon, New Zealand.</p>
+                <p class="section-title">My Journey</p>
+                <p class="">After three years working as a civil engineer at a consultancy I have developed the skills to develop practical solutions to complex problems in a professional environment, while meeting the needs of the client and of the company. Over this period I began to realise the aspects of my career I excelled at and got the most satisfaction from were those most closely related to the software side rather than the practical side of engineering. Having had a taste of coding through my degree, I knew it was something I was interested in and had a strong aptitude for, and after a few months of learning to code on my own that interest turned into a passion. Now I aim to turn that passion into a career.</p>
+            </div>
         </div>
         <div class="content-block" id="c2">
-            <h1 class="title">Skills</h1>
+            <h1 class="title">Skills</h1>   
             <h2 class="sub-title"></h2>
         </div>
         <div class="content-block" id="c3">
@@ -44,23 +50,27 @@
             <div class="projects">
                 <button id="p-b-left"></button>
                     <div class="project-swipe">
-                        <div id="p1" class="project hidden">
-                            <a target="_blank" class="project-title" href="https://christopherhendrickson.github.io/tic-tac-toe">Tic-Tac-Toe & Connect 4</a>
-                            <p class="project-desc">Play tic-tac-toe and connect 4 against friends, or the computer with varying levels of difficulty.</p>
-                        </div>
-                        <div id="p2" class="project back-left">
+
+                        <div id="p1" class="project back-left">
                             <a target="_blank" class="project-title" href="http://music-mikser.herokuapp.com/playlists">MIKSEr</a>
-                            <p class="project-desc">A song warping music guessing game. Create a playlist, guess other users playlists, or play with random spotify tracks.</p>
+                            <p class="project-desc">MIKSEr is a song warping music guessing game. Create a playlist, guess other users playlists, or play with random spotify tracks (Volume Warning).</p>
+                            <p class="project-tech">Express, EJS, MongoDB, Spotify API</p>
                         </div>
-                        <div id="p3" class="project center">
+                        <div id="p2" class="project center">
                             <a target="_blank" class="project-title" href="https://ninelocks.herokuapp.com/">Nine Locks</a>
                             <p class="project-desc">A real time online multiplayer card game, invented by some friends and I during a ski trip.</p>
+                            <p class="project-tech">React, Flask, Socketio</p>
                         </div>
-                        <div id="p4" class="project back-right">
+                        <div id="p3" class="project back-right">
                             <a target="_blank" class="project-title" href="https://kerosene-date.herokuapp.com/">Kerosene</a>
                             <p class="project-desc">A match-making style dating app with a current userbase consisting mostly of very cute dogs. This is a mobile first app, and was developed in a team of three</p>
+                            <p class="project-tech">React, Express, Firebase, MongoDB</p>
                         </div>
-
+                        <div id="p4" class="project hidden">
+                            <a target="_blank" class="project-title" href="https://christopherhendrickson.github.io/tic-tac-toe">Tic-Tac-Toe & Connect 4</a>
+                            <p class="project-desc">Play tic-tac-toe and connect 4 against friends, or the computer with varying levels of difficulty.</p>
+                            <p class="project-tech">HTML, CSS, Vanilla JS</p>
+                        </div>
                     </div>
 
                 <button id="p-b-right"></button>
@@ -68,8 +78,35 @@
         </div>
         <div class="content-block" id="c4">
             <h1 class="title">Links</h1>
-            <div class="links">
+            
+            <div class="links-contact row">
 
+                <div class="links col">
+                    <a href="https://github.com/ChristopherHendrickson" target="_blank"><img src="./lib/github.png"></a>
+                    <a href="https://www.linkedin.com/in/christopher-hendrickson-791700242/" target="_blank"><img src="./lib/linkedin.png"></a>
+                    <a href="./lib/CV - Christopher Hendrickson.pdf" target="_blank"><img src="./lib/cv.png"></a>
+                </div>
+                <div class="contact">
+                    <h1>Get In Touch</h1>
+                    <form action="https://formsubmit.co/christopher.hendricksonacc@gmail.com" method="POST">
+                        <div class="form-group form-col">
+
+               
+                            <input type="text" name="name" class="form-control" placeholder="Name" required>
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="http://127.0.0.1:5500/Projects/Portfolio/thankyou.html">
+                   
+                            <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                      
+                        </div>
+                        <div class="form-group">
+                        <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+                        </div>
+                        <div class="button-holder">
+                        <button type="submit" class="submit">Send</button>
+                    </div>
+                    </form>
+                </div>
             </div>
 
         </div>

@@ -1,7 +1,7 @@
 const box = document.getElementById("box");
 const scrollPoint = document.getElementById("scroll-point")
 scrollPoint.style.height='100vh'
-const numContents = 4
+
 const aboutLabel = document.getElementById('about-label')
 const projectsLabel = document.getElementById('projects-label')
 const skillsLabel = document.getElementById('skills-label')
@@ -9,6 +9,7 @@ const linksLabel = document.getElementById('links-label')
 
 
 const content = document.getElementById("content")
+const numContents = content.childElementCount
 const c1 = document.getElementById('c1')
 const repeatedContent = c1.cloneNode(true)
 content.appendChild(repeatedContent)
@@ -53,7 +54,7 @@ const run = (box) => {
                 angle+=360
             }
             box.style.transform = `rotate(${angle}deg)`;
-            scrollPoint.style.height = `${angle/360*100*numContents+100}vh`
+            scrollPoint.style.height = `${angle/360*100*numProjects+100}vh`
             scrollPoint.scrollIntoView({ block: "end" })
         }
 
@@ -65,7 +66,7 @@ const nav = (ref,angle) => {
         box.style.transition = 'all 0.6s'
         box.style.transform = `rotate(${angle}deg)`;
         
-        scrollPoint.style.height = `${angle/360*100*numContents+100}vh`
+        scrollPoint.style.height = `${angle/360*100*4+100}vh`
         scrollPoint.scrollIntoView({ behavior:"smooth", block: "end" })
         box.style.transition = 'all 0s'
         
@@ -89,9 +90,12 @@ run(box);
 const leftButton = document.getElementById('p-b-left')
 const rightButton = document.getElementById('p-b-right')
 const projects = Array.from(document.getElementsByClassName('project-swipe')[0].children)
+const numProjects = projects.length
+const projectOrder = ['back-left','center','back-right']
 
-const projectOrder = ['hidden','back-left','center','back-right']
-
+while (projectOrder.length < numProjects) {
+    projectOrder.push('hidden')
+}
 
 
 const reorder = () => {

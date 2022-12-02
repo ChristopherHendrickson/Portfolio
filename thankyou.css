@@ -1,0 +1,22 @@
+.container {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    align-items: center;
+}
+
+a {
+    all: unset;
+    padding:16px;
+    background-color: rgba(54, 54, 54, 0.14);
+    width:fit-content;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 80px;
+    color:rgba(54, 54, 54, 0.84);
+}

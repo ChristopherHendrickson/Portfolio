@@ -7,21 +7,25 @@
 body {
     background-color: #000000;
     overflow-y:hidden;
+    font-family: 'Open Sans', sans-serif;
+
 }
 
 .side-panel {
     position:fixed;
     color:white;
-    font-family: 'Open Sans', sans-serif;
     height:100vh;
     width:400px;
     display:flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
+}
+
+.marg-10 {
+    margin:10px;
 }
 
 #normal-scroll {
-    padding:10px;
     cursor: pointer;
     font-size: 14px;
 }
@@ -34,8 +38,10 @@ body {
     position: fixed;
     width: 400px;
     height: 400px;
-    top: 20%;
+    top: calc(50% - 200px);
     left: 0;
+    transform-origin: center center;
+
 }
 
 .box {
@@ -113,7 +119,7 @@ body {
 }
 
 #links-label {
-    top: calc(200px - 1rem);
+    top: calc(200px - 2rem);
     text-align: center;
     right:calc(280px + 1.5rem);
 }
@@ -127,26 +133,25 @@ body {
 }
 
 .content {
-    font-family: 'Open Sans', sans-serif;
     position: absolute;
     width:fit-content;
     display:flex;
     flex-direction: column;
     align-items: flex-end;
     right:0;
-    background-color: rgb(153, 135, 135);
+    background-color: rgb(109, 109, 109);
 }
 
 .content-block {
     /* box-sizing: content-box; */
-    color:black;
-    height:99vh;
-    width:calc(100vw - 550px - 0vh);
-    margin:0vh 150px 1vh 0vh;
+    color:rgb(255, 255, 255);
+    height:97vh;
+    width:calc(100vw - 430px);
+    margin:0 30px 3vh 0px;
     padding:40px;
 
     box-shadow: 0 8px 6px -6px black;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(27, 27, 27);
 
 
 }
@@ -160,6 +165,25 @@ body {
     font-size:40px;
 }
 
+.about {
+    line-height:3rem;
+    margin:auto auto;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 90%;
+    height: 80%;
+    color:rgba(216, 216, 216, 0.84);
+    font-size: 26px;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-title {
+    color:white;
+    font-size:30px;
+    margin-top:20px;
+}
 
 /* projects */
 
@@ -191,10 +215,15 @@ body {
 
 }
 
-.project-title, .project-desc {
+.project-title, .project-desc, .project-tech {
     color:white;
     background-color: rgb(0,0,0,0.8);
     padding: 0 20px 10px 20px;
+}
+
+.project-tech {
+    color:rgb(248, 73, 50);
+    font-weight:1000;
 }
 
 .project-title {
@@ -202,6 +231,7 @@ body {
 }
 
 .project.hidden {
+    position:absolute;
     display:none;
 }
 
@@ -275,34 +305,131 @@ body {
     background-repeat: no-repeat;
 }
 
-#p1 {
-    background-image: url('./lib/tictactoe.png');
-}
 
-#p2 {
+
+#p1 {
     background-image: url('./lib/mikser.png');
 }
 
-#p3 {
+#p2 {
     background-image: url('./lib/ninelocks.png');
 }
 
-#p4 {
+#p3 {
     background-image: url('./lib/kerosene.png');
 }
 
-#c1, #c5 {
+#p4 {
+    background-image: url('./lib/tictactoe.png');
 }
 
-#c2 {
-}
-
-#c3 {
-}
-
-#c4 {
+#p5 {
+    background-image: url('./lib/kerosene.png');
 }
 
 
+/* Links and Contact */
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.links {
+    margin:0 0;
+    align-self: center;
+    width:60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.links img:hover {
+    height:200px;
+    transition:0.2s;
+}
+
+.links img {
+    height:190px;
+    transition:0.3s;
+
+}
 
 
+.links-contact {
+    height:90%;
+}
+
+.contact {
+    width:40%;
+    padding: 0 6%;
+}
+
+.form-col {
+    display:flex;  
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width:100%;
+}
+
+
+
+.form-control {
+    box-sizing: border-box;
+    min-width:100%;
+    max-width:100%;
+    padding:10px;
+    margin: 10px 0;
+    line-height: 1.5rem;
+    
+}
+
+.submit {
+    padding:10px;
+    width:90px;
+    margin-top:10px;
+    font-size: 18px;
+    vertical-align: middle;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.button-holder{ 
+    text-align: center; 
+}
+
+input::-webkit-input-placeholder {
+    font-size: 18px;
+    vertical-align: middle;
+  }
+  
+  input::-moz-placeholder {
+    font-size: 18px;
+    vertical-align: middle;
+  }
+  
+  input:-ms-input-placeholder {
+    font-size: 18px;
+    vertical-align: middle;
+  }
+  
+  input::placeholder {
+    font-size: 18px;
+    vertical-align: middle;
+  }
+
+  textarea {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    vertical-align: middle;
+    min-height:400px;
+
+  }
