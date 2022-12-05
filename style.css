@@ -93,7 +93,7 @@ body {
     font-family: 'Indie Flower', cursive;
 }
 
-.nav-label:hover {
+.nav-label:hover, .links a:hover {
     text-decoration: underline;
     
 }
@@ -123,6 +123,7 @@ body {
     text-align: center;
     right:calc(280px + 1.5rem);
 }
+
 
 
 #scroll-point {
@@ -326,6 +327,32 @@ body {
     background-image: url('./lib/kerosene.png');
 }
 
+/* skills */
+
+.skills {
+    min-height:90%;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.skill {
+    margin:10px;
+    max-width: 200px;
+    margin: 0 30px;
+}
+
+.skill p {
+    text-align: center;
+    font-size: 30px;
+    word-break: break-word;
+}
+
+.skill img {
+
+    height:200px;
+}
+
 
 /* Links and Contact */
 
@@ -334,6 +361,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     height:100%;
+    align-content: space-between;
 }
 
 .row {
@@ -350,15 +378,28 @@ body {
     align-items: center;
 }
 
-.links img:hover {
-    height:200px;
-    transition:0.2s;
+.links > a {
+    color:white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    justify-content: center;
+    font-size:40px;
+    margin-left:25%; 
+    align-items: center;
+    
 }
+
+.links p {
+    margin-left: 30px;
+}
+
+
 
 .links img {
     height:190px;
     transition:0.3s;
-
 }
 
 
