@@ -123,8 +123,27 @@ rightButton.addEventListener('click',shiftRight)
 
 // normal scroll bar
 
+let scrollEnabled=false
+
 const normalScroll = document.getElementById('normal-scroll')
 normalScroll.addEventListener('click', ()=>{
     document.body.style.overflow='auto'
     normalScroll.remove()
+    scrollEnabled=true
 })
+
+// scroll bar indicators
+
+onwheel = (event) => { 
+    if (!scrollEnabled) {
+        const indicator = document.getElementById('scroll-indicator')
+        const normal = document.getElementById('normal-scroll')
+        indicator.classList.add('show')
+        normal.classList.add('highlight')
+        setTimeout(()=>{
+            indicator.classList.remove('show')
+            normal.classList.remove('highlight')
+
+        },1000)
+    }
+};
