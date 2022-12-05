@@ -124,6 +124,7 @@ rightButton.addEventListener('click',shiftRight)
 // normal scroll bar
 
 let scrollEnabled=false
+let timeout = null
 
 const normalScroll = document.getElementById('normal-scroll')
 normalScroll.addEventListener('click', ()=>{
@@ -140,10 +141,11 @@ onwheel = (event) => {
         const normal = document.getElementById('normal-scroll')
         indicator.classList.add('show')
         normal.classList.add('highlight')
-        setTimeout(()=>{
+        clearTimeout(timeout)
+        timeout = setTimeout(()=>{
             indicator.classList.remove('show')
             normal.classList.remove('highlight')
 
-        },1000)
+        },500)
     }
-};
+};  
