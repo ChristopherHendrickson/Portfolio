@@ -26,6 +26,10 @@ body {
     margin:10px;
 }
 
+#title-logo {
+    max-width:200px;
+}
+
 #normal-scroll {
     cursor: pointer;
     font-size: 14px;
