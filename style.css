@@ -672,3 +672,15 @@ textarea {
         line-height: 1.5rem;
     }
 }
+
+
+@media (max-height:800px) {
+    .links img {
+        height:120px;
+    }
+
+    textarea {
+        min-height:200px;
+    
+    }
+}
