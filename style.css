@@ -661,6 +661,10 @@ textarea {
         width:100%;
         margin-bottom: 30px;
     }
+
+    #mobileHide {
+        display:none;
+    }
 }
 
 @media (max-height: 800px) {

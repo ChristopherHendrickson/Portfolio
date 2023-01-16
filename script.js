@@ -12,6 +12,7 @@ const content = document.getElementById("content")
 const numContents = content.childElementCount
 const c1 = document.getElementById('c1')
 const repeatedContent = c1.cloneNode(true)
+repeatedContent.id = 'mobileHide'
 content.appendChild(repeatedContent)
 window.onbeforeunload = () => {
     window.scrollTo(0, 0);
