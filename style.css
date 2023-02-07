@@ -177,6 +177,7 @@ body {
     align-items: flex-end;
     right:0;
     background-color: rgb(109, 109, 109);
+    background-image: url('lib/back.png');
 }
 
 .content-block {
