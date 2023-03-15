@@ -1,5 +1,5 @@
 const wake = async () =>{
-    const res = await fetch('http://localhost:5173/api/internal/wakeup',{
+    const res = await fetch('https://cookebook.onrender.com/api/internal/wakeup',{
         method:'POST',
         mode:'no-cors',
     })
