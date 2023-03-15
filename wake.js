@@ -8,7 +8,6 @@ const wake = async () =>{
             'RETURN_URL':'https://christopherhendrickson.dev'
         })
     })
-    console.log(res.status)
 }
 
 wake()
