@@ -55,7 +55,7 @@ const run = (box) => {
                 angle+=360
             }
             box.style.transform = `rotate(${angle}deg)`;
-            scrollPoint.style.height = `${angle/360*100*numProjects+100}vh`
+            scrollPoint.style.height = `${angle/360*100*numContents+100}vh`
             scrollPoint.scrollIntoView({ block: "end" })
         }
 
