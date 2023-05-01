@@ -75,7 +75,7 @@ const nav = (ref,angle) => {
 }
 
 
-nav(aboutLabel,0)
+nav(aboutLabel,1)
 nav(skillsLabel,90)
 nav(projectsLabel,180)
 nav(linksLabel,270)
