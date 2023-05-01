@@ -4,9 +4,18 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+
 body {
     background-color: #000000;
-    overflow-y:hidden;
     font-family: 'Azo Sans', sans-serif;
                                                 
 
@@ -176,8 +185,8 @@ body {
     flex-direction: column;
     align-items: flex-end;
     right:0;
-    background-color: rgb(109, 109, 109);
-    background-image: url('lib/back.png');
+    background-color: rgb(147, 149, 152);
+    /* background-image: url('lib/back.png'); */
 }
 
 .content-block {
@@ -663,9 +672,9 @@ textarea {
         margin-bottom: 30px;
     }
 
-    #mobileHide {
+    /* #mobileHide {
         display:none;
-    }
+    } */
 }
 
 @media (max-height: 800px) {

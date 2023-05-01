@@ -124,7 +124,7 @@ rightButton.addEventListener('click',shiftRight)
 
 // normal scroll bar
 
-let scrollEnabled=false
+let scrollEnabled=true
 let timeout = null
 
 const normalScroll = document.getElementById('normal-scroll')
@@ -136,17 +136,46 @@ normalScroll.addEventListener('click', ()=>{
 
 // scroll bar indicators
 
-onwheel = (event) => { 
-    if (!scrollEnabled) {
-        const indicator = document.getElementById('scroll-indicator')
-        const normal = document.getElementById('normal-scroll')
-        indicator.classList.add('show')
-        normal.classList.add('highlight')
-        clearTimeout(timeout)
-        timeout = setTimeout(()=>{
-            indicator.classList.remove('show')
-            normal.classList.remove('highlight')
+// onwheel = (event) => { 
+//     if (!scrollEnabled) {
+//         const indicator = document.getElementById('scroll-indicator')
+//         const normal = document.getElementById('normal-scroll')
+//         indicator.classList.add('show')
+//         normal.classList.add('highlight')
+//         clearTimeout(timeout)
+//         timeout = setTimeout(()=>{
+//             indicator.classList.remove('show')
+//             normal.classList.remove('highlight')
 
-        },500)
+//         },500)
+//     }
+// };  
+
+let previousScrollHeight = 0
+
+onscroll = (event) =>{
+    if (scrollEnabled) {
+        const body = document.body;
+        const html = document.documentElement;
+        const totalHeight = Math.max(
+          body.scrollHeight, 
+          html.scrollHeight
+        );
+        const currentHeight = window.pageYOffset
+        
+        const direction = currentHeight > previousScrollHeight ? 'down' : 'up'
+
+        box.style.transform = `rotate(${360*currentHeight/(totalHeight-html.clientHeight)}deg)`
+
+        previousScrollHeight = currentHeight
+
+        if (direction == 'down' && currentHeight >= totalHeight-html.clientHeight) {
+            window.scrollTo(0, 2);
+            previousScrollHeight = 0
+        }
+        if (direction == 'up' && currentHeight <= 1) {
+            window.scrollTo(0, totalHeight-2);
+            previousScrollHeight = totalHeight
+        }
     }
-};  
+}
